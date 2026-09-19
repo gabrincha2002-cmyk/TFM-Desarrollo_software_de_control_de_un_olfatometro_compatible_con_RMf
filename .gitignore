@@ -1,0 +1,26 @@
+# Archivos de entorno virtual y dependencias a ignorar por el repositorio de Git
+# Entorno virtual
+venv/
+.venv/
+env/
+
+# Bytecode y cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code (configuración local del editor)
+.vscode/
+
+# Logs y archivos temporales
+*.log
+*.tmp
+
+# Archivos generados por el sistema operativo
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Configuración local con datos sensibles (si en algún momento la tienes)
+.env
+config/local_settings.py

@@ -1,0 +1,68 @@
+========================================================================
+ OlfaMetric v2 - Entorno de ejecucion y dependencias
+ Generado: 2026-08-27
+========================================================================
+
+INTERPRETE
+------------------------------------------------------------------------
+Python 3.14.4
+Entorno virtual: .venv (Scripts/python.exe)
+pip 26.1.1
+
+DEPENDENCIAS DIRECTAS (importadas explicitamente en el codigo)
+------------------------------------------------------------------------
+customtkinter        == 5.2.2      (interfaz grafica principal)
+CTkToolTip            == 0.9        (tooltips en widgets de customtkinter)
+matplotlib            == 3.10.9     (graficas embebidas y exportacion de imagenes)
+numpy                 == 2.4.4      (calculo numerico / procesamiento de señales)
+openpyxl               == 3.1.5      (generacion de reportes Excel)
+reportlab              == 4.5.1      (generacion de reportes PDF)
+websockets             == 16.0       (comunicacion WebSocket cliente/servidor)
+zeroconf               == 0.148.0    (descubrimiento de dispositivos mDNS)
+
+Nota: los siguientes modulos usados en el codigo forman parte de la
+biblioteca estandar de Python (no requieren instalacion via pip):
+asyncio, json, threading, logging, time, queue, typing, os, datetime,
+math, tempfile, csv, collections, statistics, random, dataclasses.
+
+DEPENDENCIAS TRANSITIVAS (instaladas automaticamente como soporte)
+------------------------------------------------------------------------
+charset-normalizer     == 3.4.7
+contourpy               == 1.3.3
+cycler                   == 0.12.1
+darkdetect               == 0.8.0
+et_xmlfile               == 2.0.0
+fonttools                == 4.62.1
+ifaddr                   == 0.2.0
+kiwisolver               == 1.5.0
+packaging                == 26.2
+pillow                   == 12.2.0
+pyparsing                == 3.3.2
+python-dateutil          == 2.9.0.post0
+six                      == 1.17.0
+
+========================================================================
+ Instalacion equivalente (pip freeze completo del entorno .venv)
+========================================================================
+charset-normalizer==3.4.7
+contourpy==1.3.3
+CTkToolTip==0.9
+customtkinter==5.2.2
+cycler==0.12.1
+darkdetect==0.8.0
+et_xmlfile==2.0.0
+fonttools==4.62.1
+ifaddr==0.2.0
+kiwisolver==1.5.0
+matplotlib==3.10.9
+numpy==2.4.4
+openpyxl==3.1.5
+packaging==26.2
+pillow==12.2.0
+pip==26.1.1
+pyparsing==3.3.2
+python-dateutil==2.9.0.post0
+reportlab==4.5.1
+six==1.17.0
+websockets==16.0
+zeroconf==0.148.0
