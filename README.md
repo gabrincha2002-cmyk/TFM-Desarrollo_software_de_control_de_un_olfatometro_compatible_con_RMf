@@ -36,7 +36,7 @@ A partir del firmware implementado y subsistema hardware diseñado en colaboraci
 
 ## Arquitectura del proyecto
 
-📁 OlfaMetric_v2\|
+📁 OlfaMetric_v2\
 ├── ⚙️ .gitattributes\
 ├── ⚙️ .gitignore\
 ├── 📄 requirements.txt\
@@ -49,7 +49,7 @@ A partir del firmware implementado y subsistema hardware diseñado en colaboraci
 ├── 🐍 widgets.py\
 └── 🐍 ws_client.py\
 
-> La carpeta `archivos_generados/` (logs de sesión/consola e informes de análisis) se crea automáticamente en la primera ejecución y no se incluye en el repositorio.
+> La carpeta `archivos_generados/` se crea automáticamente en la primera ejecución y no se incluye en el repositorio.
 
 ## Manual de Usuario
 
@@ -72,8 +72,8 @@ A partir del firmware implementado y subsistema hardware diseñado en colaboraci
 ## Autores y contacto
 
 Estudiante - Gabriel Collado Santamaría (gabcolsan@gmail.com)\
-Directora TFT - Lilibeth Zambrano Martínez\|
-Asesor Externo - Eduardo Fernández Jover\|
+Directora TFT - Lilibeth Zambrano Martínez\
+Asesor Externo - Eduardo Fernández Jover\
 
 ## Licencia
 Todos los derechos reservados (pendiente de tramitar con la Universidad Miguel Hernández de Elche).
