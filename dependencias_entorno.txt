@@ -1,6 +1,5 @@
 ========================================================================
- OlfaMetric v2 - Entorno de ejecucion y dependencias
- Generado: 2026-08-27
+Entorno de ejecucion y dependencias
 ========================================================================
 
 INTERPRETE
