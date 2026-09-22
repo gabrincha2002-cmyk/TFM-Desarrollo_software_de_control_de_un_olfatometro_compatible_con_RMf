@@ -987,7 +987,22 @@ class App(ctk.CTk):
         # Se deshabilita el botón para evitar reintentos de búsqueda local de dispositivos. 
         self.b_buscar_dispositivos.configure(state="disabled")
 
+
         def _hilo_busqueda_mdns():
+            """
+            Conecta el dispositivo con la URI encontrada, o informa de fallo en la búsqueda mediante mDNS.
+
+            En función de obtener o no la URI resuelta del dispositivo: conecta el software de control con el nuevo identificador o informa al usuario del fallo de la búsqueda realizada.
+
+            Args:
+                Ninguno.
+            Return:
+                Ninguno.
+            Raises:
+                Ninguno.
+
+            """
+
             uri = discovery.buscar_mdns()
 
             if uri:

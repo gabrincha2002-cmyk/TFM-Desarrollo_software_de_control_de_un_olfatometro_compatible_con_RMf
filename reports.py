@@ -69,7 +69,7 @@ class DatosInforme:
     duracion_sesion: str
     tiempo_inicio_sesion: float
 
-    # Configuración  del protocolo. 
+    # Configuración del protocolo.
     num_ciclos: str
     tiempo_exposicion: str
     tiempo_desensibilizacion: str
