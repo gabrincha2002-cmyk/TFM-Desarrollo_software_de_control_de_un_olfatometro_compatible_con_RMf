@@ -36,7 +36,7 @@ A partir del firmware implementado y subsistema hardware diseñado en colaboraci
 
 ## :open_file_folder: Arquitectura del proyecto
 
-📁 OlfaMetric_v2\
+📁 OlfaMetric\
 ├── ⚙️ .gitattributes\
 ├── ⚙️ .gitignore\
 ├── 📄 requirements.txt\
