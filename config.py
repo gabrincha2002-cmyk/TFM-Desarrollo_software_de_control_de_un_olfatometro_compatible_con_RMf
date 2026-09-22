@@ -31,11 +31,11 @@ INTERVALO_SONDEO_COLAS_RECIBIDOS_ESTADO_MS = 50
 INTERVALO_SONDEO_COLA_ENVIO_S = 0.05
 # Intervalo de reintento de reconexión entre software y ESP32-WROOM-32U automatica en segundos
 RECONEXION_AUTOMATICA_S = 0.5
-# Direccion del servicio mDNS a buscar en la red local para el descubrimiento del ESP32-WROOM-32U del subsistema hardware.
+# Direccion del servicio DNS-SD a buscar en la red local para el descubrimiento del ESP32-WROOM-32U del subsistema hardware.
 SERVICIO_MDNS = "_olfatometro._tcp.local."
-# Tiempo máximo de espera para el cierre del hilo de búsqueda mDNS en segundos.
+# Tiempo máximo de espera para el cierre del hilo de búsqueda DNS-SD en segundos.
 TIMEOUT_CIERRE_HILO_S = 3.0
-# Tiempo máximo de espera para la búsqueda de mDNS en segundos.
+# Tiempo máximo de espera para la búsqueda de DNS-SD en segundos.
 TIMEOUT_SEGUNDOS_MDNS = 5
 # Intervalo de ping al ESP32-WROOM-32U para comprobar la conectividad en segundos.
 PING_INTERVAL_S = 10

@@ -1,7 +1,7 @@
 """
 Main.py es el módulo principal del software desarrollado, coordina el resto de módulos propios elaborados para:
     - Generar la interfaz gráfica de la aplicación.
-    - Coordina la conexión WebSocket y el descubrimiento mediante mDNS con el ESP32-WROOM-32U.
+    - Coordina la conexión WebSocket y el descubrimiento mediante mDNS/DNS-SD con el ESP32-WROOM-32U.
     - Coordinar la lógica del protocolo experimental.
     - Coordinar la lógica, registrar y graficar los datos obtenidos de la caracterización.
     - Registrar el historial completo de la sesión experimental.
@@ -25,7 +25,7 @@ Librerías externas:
     - widgets: Módulo propio del proyecto que centraliza las clases de widgets reutilizables en la lógica y GUI.
     - config: Módulo propio del proyecto que centraliza la totalidad de las constantes destinadas a la configuración de la aplicación.
     - reports: Módulo propio del proyecto encargado de la configuración y generación de informes de sesión en diferentes formatos de interés.
-    - discovery: Módulo propio del proyecto responsable del descubrimiento del ESP32-WROOM-32U en la red local mediante mDNS.
+    - discovery: Módulo propio del proyecto responsable del descubrimiento del ESP32-WROOM-32U en la red local mediante mDNS/DNS-SD.
 
 """
 
@@ -61,7 +61,7 @@ class App(ctk.CTk):
 
     Es la encargada de definir y configurar la totalidad de la interfaz gráfica de usuario del software de control desarrollado. Por otro lado, coordina la 
     conexión realizada del módulo ws_client.py, mediante el procesamiento de los datos recibidos y enviados al mismo módulo. Adicionalmente permite la 
-    posibilidad de recurrir al descubrimiento local mediante mDNS a través del módulo discovery.py en caso de tener dificultades en realizar la conexión 
+    posibilidad de recurrir al descubrimiento local mediante mDNS/DNS-SD a través del módulo discovery.py en caso de tener dificultades en realizar la conexión
     con el ESP32-WROOM-32U. La gestión de la lógica de protocolos  experimentales y caracterización de parámetros también son responsabilidades de la clase App; 
     a través del control de tiempos, banderas y comandos respecto el ESP32-WROOM-32U. Por último, almacena el conjunto de datos registrado durante la sesión 
     experimental, generando a partir de los métodos definidos en el módulo reports.py el formato de interés correspondiente.
@@ -963,7 +963,7 @@ class App(ctk.CTk):
 
     def iniciar_busqueda_mdns(self):
         """
-        Comienza la búsqueda del ESP32-WROOM-32U mediante mDNS en la red local.
+        Comienza la búsqueda del ESP32-WROOM-32U mediante mDNS/DNS-SD en la red local.
 
         Tras deshabilitar el correspondiente botón de búsqueda, llama al método encargado de resolver la URI del ESP32-WROOM-32U en un hilo secundario para evitar
         el bloqueo del hilo principal tkinter en el que corre la aplicación. En función del resultado en la búsqueda de la URI, ejecuta lo antes posible el método relativo 
@@ -990,7 +990,7 @@ class App(ctk.CTk):
 
         def _hilo_busqueda_mdns():
             """
-            Conecta el dispositivo con la URI encontrada, o informa de fallo en la búsqueda mediante mDNS.
+            Conecta el dispositivo con la URI encontrada, o informa de fallo en la búsqueda mediante mDNS/DNS-SD.
 
             En función de obtener o no la URI resuelta del dispositivo: conecta el software de control con el nuevo identificador o informa al usuario del fallo de la búsqueda realizada.
 
@@ -1049,7 +1049,7 @@ class App(ctk.CTk):
         URI actualizada. 
         
         Args: 
-            - uri (str): URI actualizada del dispositivo encontrado mediante mDNS.
+            - uri (str): URI actualizada mediante mDNS del dispositivo encontrado mediante DNS-SD.
         Return:
             Ninguno.
         Raises:
@@ -3340,7 +3340,7 @@ class App(ctk.CTk):
 
         Mientras la cola del estado de conexión no esté vacía, extrae el elemento que entró el primero y comprueba el estado. Informa por consola al usuario y en caso 
         de que estuviera un protocolo o caracterización activo, intenta detener todos los canales y advertir al usuario por consola como medida de seguridad. A su vez, 
-        actualiza visualmente el widget del estado de conexión correspondiente y desbloquea el botón destinado a búsqueda mediante mDNS en caso de que no haya ningún
+        actualiza visualmente el widget del estado de conexión correspondiente y desbloquea el botón destinado a búsqueda mediante mDNS/DNS-SD en caso de que no haya ningún
         proceso activo. Finalmente se autoreagenda cada config.INTERVALO_SONDEO_COLAS_RECIBIDOS_ESTADO_MS milisegundos, volviendo a procesar el estado de conexión pendiente.
         
         Args: 

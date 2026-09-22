@@ -1,9 +1,9 @@
 """
-Descubre el ESP32-WROOM-32U del subsistema hardware en la red local mediante el protocolo mDNS.
+Conecta y gestiona la conexión WebSocket con el ESP32-WROOM-32U del subsistema hardware.
 
-Implementa la función pública buscar_mdns() que busca el servicio mDNS definido en la constante SERVICIO_MDNS del módulo config.py en la red local. 
-Una vez encuentra el servicio, devuelve la URI del dispositivo según el formato ws://IP:PUERTO, donde IP es la dirección IP del ESP32-WROOM-32U y PUERTO es el puerto del servicio mDNS.
-En caso de no ser encontrado el dispositivo, devuelve None.
+Define la clase Cliente del protocolo de red WebSocket para gestionar y establecer una conexión inalámbrica con el ESP32-WROOM-32U integrado en el subsistema hardware.
+Es la encargada de la recepción y envío de mensajes de la misma conexión a través de colas FIFO thread-safe, impidiendo el bloqueo del hilo principal de Tkinter.
+Adicionalmente calcula la latencia existente mediante el envío y recepción de Ping-Pong, para su registro y actualización del widget de la GUI correspondiente.
 
 Librerias externas:
     - asyncio: Librería nativa de Python para trabajar de forma concurrente en el código.
